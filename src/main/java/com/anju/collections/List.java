@@ -30,6 +30,7 @@ public interface List<T> extends Iterable<T> {
      *
      * @param item object to be removed from the list
      * @return returns the index of the object removed from the list
+     * @throws IllegalArgumentException when passed an invalid <code>item</code>
      */
     int remove(T item);
 
