@@ -3,6 +3,9 @@ package com.anju.collections;
 import com.anju.collections.impl.LinkedList;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class ListTest {
 
     @Test
@@ -15,6 +18,7 @@ public class ListTest {
         for(String babyName : babyNames){
             System.out.println(babyName);
         }
+
 //        String deleted = babyNames.remove(1);
 //        System.out.println("Removed item::"+deleted);
 
@@ -27,12 +31,35 @@ public class ListTest {
 //
 //        System.out.println("IndexOf::"+index);
 //        babyNames.clear();
+        Iterator<String> it = babyNames.iterator();
 
         babyNames.add(2,"anshul");
+//        while(it.hasNext()){
+//            System.out.println(it.next());
+//        }
+//        for(String babyName : babyNames){
+//            System.out.println(babyName);
+//        }
+//        System.out.println(babyNames.size());
+       LinkedList<String> animals = new LinkedList<>();
+        animals.add("lion");
+        animals.add("tiger");
+        animals.add("dog");
+        animals.add("bat");
+        babyNames.addAll(animals);
+
         for(String babyName : babyNames){
             System.out.println(babyName);
         }
-        System.out.println(babyNames.size());
+
+        List<String> sublist = babyNames.subList(1, 7);
+        System.out.println("Sublist::");
+        for(String str : sublist){
+            System.out.println(str);
+
+        }
+
+
 
 
     }
